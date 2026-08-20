@@ -27,7 +27,7 @@ utilisation. For true slot utilisation use the server's own gauges (`make metric
 
 Throughput moved 1.05x while P95 moved 4.47x. That gap is the goodput argument: past saturation you buy throughput by spending latency, and if your SLO is a P95 target then the requests you added are no longer being served within it. (This lab does not fix an SLO number for you -- pick one in your write-up and state how much goodput you keep at it.)
 
-## Your reading (required -- replace this line)
+## Your reading
 
 _Where does your server saturate, and what is the evidence? Name the number that
 convinced you. Then say what you would change first to raise goodput at your SLO --

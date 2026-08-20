@@ -84,10 +84,10 @@ Server bão hoà dưới mức 50 users. Bằng chứng là P95 tăng vọt 4.47
 
 | Day | Piece | Real hay stub? |
 |---|---|---|
-| N16 Cloud/IaC | | stub |
-| N17 Data pipeline | | stub |
-| N18 Lakehouse | | stub |
-| N19 Vector + features | | stub |
+| N16 Cloud/IaC | - | stub |
+| N17 Data pipeline | - | stub |
+| N18 Lakehouse | - | stub |
+| N19 Vector + features | - | stub |
 | N20 Serving | `llama-server` | real |
 
 **Latency split** (mean của 3 query, từ output của `pipeline.py`):

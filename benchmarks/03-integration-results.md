@@ -28,7 +28,7 @@ Dominant stage: **llm** (100% of total)
 > Splitting prefill and decode helps because prefill is compute-bound and decode is memory-bandwidth-bound.
 
 
-## Which N16-N19 pieces are real (required -- replace this line)
+## Which N16-N19 pieces are real
 
 _List each of N16, N17, N18, N19 as real or stubbed. Stubbing costs no points;
 misrepresenting it does. Then answer: is the dominant stage above what you expected?

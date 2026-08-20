@@ -14,7 +14,7 @@ Completed requests: `UD-Q4_K_XL` 10/10 · `UD-Q2_K_XL` 10/10
 - **TPOT** = per-output-token decode cost, bounded by memory bandwidth. `decode tok/s = 1000 / TPOT_p50`.
 - `UD-Q2_K_XL` decodes **1.10x faster** than `UD-Q4_K_XL` here, for 0.73 GB less on disk.
 
-## Your observation (required -- replace this line)
+## Your observation
 
 _Is the smaller quantization worth it on your machine? Compare the numbers above,
 then judge the answer quality yourself: run `make serve` on each and ask the same
