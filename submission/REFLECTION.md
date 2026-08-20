@@ -136,19 +136,19 @@ Việc cố gắng nhồi thêm luồng (lên 14) khi băng thông đã chạm t
 > Bỏ trống nếu không làm. Xem `bonus/README.md`. Đừng làm hết — **một** finding sâu
 > ăn điểm hơn năm bảng nông.
 
-**Đã làm:** _<B1 build-compare / B2 sweep nào / B4 challenge nào / B5 lựa chọn nào>_
+**Đã làm:** B1: `make build-llama` và `make compare-builds` (Biên dịch trực tiếp llama.cpp trên máy và so sánh)
 
 **Numbers:**
 
 ```
-before:  <số>
-after:   <số>
-speedup: <X.Y>×
+before:  31.7 tok/s (prebuilt release)
+after:   37.9 tok/s (source build, -DGGML_NATIVE=ON)
+speedup: 1.20×
 ```
 
 **Điều này nói lên gì mà deck chưa nói:**
 
-_(để trống nếu bạn không làm phần này)_
+Deck tập trung nhiều vào Memory Bandwidth cho quá trình Decode, nhưng qua thực nghiệm này, ta thấy Instruction-Level Optimization (thông qua compiler) cũng đóng vai trò quan trọng không kém đối với CPU Inference. Bản prebuilt phải tương thích ngược tốt nên nó bỏ lỡ các tập lệnh tối ưu phần cứng (như NEON) có trên dòng máy đời mới. Việc tự build source C++ bằng cờ `-DGGML_NATIVE=ON` giúp compiler mở khoá toàn bộ kiến trúc chip Apple M4 Pro, qua đó giúp tăng đến 20% tốc độ Decode dù băng thông phần cứng không hề thay đổi.
 
 ---
 
